@@ -1,5 +1,5 @@
 package com.wiorek.src;
-public class RomanNumerialsConvertion {
+public class RomanNumeralsConvertion {
     public static String convertIntToRoman(int number)throws IllegalArgumentException{
         if (number<=0||number>3999){
             throw new IllegalArgumentException("Number must be between 0 and 4000");
