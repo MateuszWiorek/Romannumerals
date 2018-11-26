@@ -29,6 +29,20 @@ public class RomanNumeralsExtendedConvertion {
         result = resultBuilder.toString();
         return result;
     }
+    /*
+this method checking given value, and return false if is not String with number, and return true when String has number as value.
+ */
+    private static boolean isNumber(String testedValue) {
+        try {
+            int intVal = Integer.parseInt(testedValue);
+        } catch (NumberFormatException nfe) {
+            System.out.println(nfe.getMessage());
+            return false;
+        }
+        return true;
+
+    }
+
 /*
 This method receive any argument, and convert it to int.
 If argument is type which is instance of Number class then convert it to int type.
@@ -50,17 +64,5 @@ Else if argument it's other type(other than double, float, long, short, byte, in
         }
         return convertIntToRoman(number);
     }
-/*
-this method checking given value, and return false if is not String with number, and return true when String has number as value.
- */
-    private static boolean isNumber(String testedValue) {
-        try {
-            int intVal = Integer.parseInt(testedValue);
-        } catch (NumberFormatException nfe) {
-            System.out.println(nfe.getMessage());
-            return false;
-        }
-        return true;
 
-    }
 }
