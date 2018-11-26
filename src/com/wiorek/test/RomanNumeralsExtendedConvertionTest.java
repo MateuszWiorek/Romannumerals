@@ -18,6 +18,11 @@ public class RomanNumeralsExtendedConvertionTest {
     public void convertNumberUnderZero(){
         RomanNumeralsExtendedConvertion.convert(-2);
     }
+
+    @Test (expected = IllegalArgumentException.class)
+    public void convertIncorrectStringToRoman(){
+        RomanNumeralsExtendedConvertion.convert("MateuszWiorek");
+    }
     // tests converting numbers like 4, 9 to check corectness of method
     @Test
     public void convertNinetyNineToRoman(){
@@ -60,4 +65,5 @@ public class RomanNumeralsExtendedConvertionTest {
         assertEquals("MMMCMXCIX", RomanNumeralsExtendedConvertion.convert(3999));
 
     }
+
 }
