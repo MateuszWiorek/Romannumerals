@@ -1,5 +1,6 @@
 package com.wiorek.test;
 import com.wiorek.src.RomanNumeralsConvertion;
+import com.wiorek.src.RomanNumeralsExtendedConvertion;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -18,6 +19,11 @@ public class RomanNumeralsConvertionTest {
     @Test
     public void convertFourtyToRoman(){
         assertEquals("XL", RomanNumeralsConvertion.convertIntToRoman(40));
+    }
+
+    @Test
+    public void convertNormalToRoman(){
+        assertEquals("MCMXCVII", RomanNumeralsExtendedConvertion.convert(1997));
     }
     @Test
     public void convertNinetyToRoman(){
